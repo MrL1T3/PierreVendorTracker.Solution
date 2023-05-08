@@ -13,5 +13,11 @@ namespace PierreVendorTracker.Tests
       Order newOrder = new Order("", "Example", "", "", 1);
       Assert.AreEqual("Example", newOrder.Text);
     }
+    [TestMethod]
+    public void VendorID_Equals_One_True()
+    {
+      Order newOrder = new Order("", "Example", "", "", 1);
+      Assert.AreEqual(1, newOrder.VendorID);
+    }
   }
 }
