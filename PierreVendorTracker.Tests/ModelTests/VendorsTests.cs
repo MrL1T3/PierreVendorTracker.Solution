@@ -13,5 +13,11 @@ namespace PierreVendorTracker.Tests
       Vendor first = new Vendor("John", "");
       Assert.AreEqual("John", first.VendorName);
     }
+    [TestMethod]
+    public void VendorDesc_Equals_SellsGlassware_True()
+    {
+      Vendor first = new Vendor("John", "John sells glassware products");
+      Assert.AreEqual("John sells glassware products", first.VendorDesc);
+    }
   }
 }
