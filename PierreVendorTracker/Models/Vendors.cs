@@ -26,7 +26,7 @@ namespace PierreVendorTracker.Models
       VendorName = NewVendor;
       VendorDesc = NewDesc;
     }
-    private static List<Vendor> sVendors = new List<Vendor>();
+    public static List<Vendor> sVendors = new List<Vendor>();
     public static void AddVendor(Vendor v) {
       v.VendorID = ++sNextID;
       sVendors.Add(v);
