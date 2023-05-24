@@ -42,5 +42,14 @@ namespace PierreVendorTracker.Tests
       Assert.AreEqual("Johnny", Vendor.sVendors[0].VendorName);
       Assert.AreEqual("Sells Chairs", Vendor.sVendors[0].VendorDesc);
     }
+    [TestMethod]
+    public void AddNewOrder_Box()
+    {
+      Vendor newVendor = new Vendor("", "");
+      Vendor.AddVendor(newVendor);
+      Order newOrder = new Order("Box", "", "", "", newVendor.VendorID);
+      newVendor.AddNewOrder(newOrder);
+      Assert.AreEqual("Box", newVendor.speOrders[0].Title);
+    }
   }
 }
