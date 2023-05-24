@@ -28,12 +28,19 @@ namespace PierreVendorTracker.Tests
       Console.WriteLine(newVendor.VendorID);
       Order newOrder = new Order("Wood", "", "13 dollars", "", newVendor.VendorID);
       Console.WriteLine(newOrder.VendorID);
-      
       Vendor.AddOrder(newOrder);
       Console.WriteLine(newVendor.speOrders);
       Assert.AreEqual(1, newVendor.speOrders.Count);
       Assert.AreEqual("Wood", newVendor.speOrders[0].Title);
       Assert.AreEqual("13 dollars", newVendor.speOrders[0].Price);
+    }
+    [TestMethod]
+    public void AddVendor_Johnny_SellsChairs()
+    {
+      Vendor newVendor = new Vendor("Johnny", "Sells Chairs");
+      Vendor.AddVendor(newVendor);
+      Assert.AreEqual("Johnny", Vendor.sVendors[0].VendorName);
+      Assert.AreEqual("Sells Chairs", Vendor.sVendors[0].VendorDesc);
     }
   }
 }
