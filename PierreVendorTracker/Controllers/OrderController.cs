@@ -20,7 +20,7 @@ namespace VendorOrderTracker.Controllers
     public ActionResult AddOrderForm(int id, Order model)
     {
       model.VendorID = id;
-      PierreVendorTracker.Models.Order.AddOrder(model);
+      PierreVendorTracker.Models.Vendor.AddOrder(model);
       return RedirectToAction("Vendor", "Vendors", new{id = model.VendorID});
     }
   }
