@@ -21,9 +21,9 @@ namespace PierreVendorTracker.Models
       Title = submittedTitle;
     }
 
-    public static void AddOrder(Order o) {
-      Vendor v = Vendor.FindVendorByID(o.VendorID);
-      v.AddNewOrder(o);
-    }
+    // public static void AddOrder(Order o) {
+    //   Vendor v = Vendor.FindVendorByID(o.VendorID);
+    //   v.AddNewOrder(o);
+    // }
   }
 }

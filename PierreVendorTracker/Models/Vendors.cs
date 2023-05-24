@@ -43,5 +43,13 @@ namespace PierreVendorTracker.Models
       }
       return null;
     }
+    public static void AddOrder(Order o) {
+      Vendor v = Vendor.FindVendorByID(o.VendorID);
+      if (v == null) {
+        throw new Exception("Vendor not found");
+      } else {
+        v.AddNewOrder(o);
+      }
+    }
   }
 }
